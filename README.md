@@ -8,13 +8,13 @@ Extension for Kohana's View class that renders as a PDF instead of HTML. Uses [D
 
 If your application is a Git repository:
 
-    git submodule add git://github.com/shadowhand/pdfview.git modules/pdfview
+    git submodule add git://github.com/marcelorodrigo/pdfview.git modules/pdfview
     git submodule update --init
 
 Or clone the the module separately:
 
     cd modules
-    git clone git://github.com/shadowhand/pdfview.git pdfview
+    git clone git://github.com/marcelorodrigo/pdfview.git pdfview
 
 ### Update DOMPDF
 
