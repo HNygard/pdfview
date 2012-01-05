@@ -54,3 +54,14 @@ Placed in a controller action:
     // Remove "inline = TRUE" to force the PDF to be downloaded
     $this->request->send_file(TRUE, 'my_pdf.pdf', array('inline' => TRUE));
 
+Or use Helper_PDF to display inline/force download:
+
+	// Display PDF inline
+	Helper_PDF::display($pdf);
+
+	// Force PDF download in user browser
+	Helper_PDF::download($pdf)
+
+	// Force PDF download, setting filename
+	Helper_PDF::download($pdf,'filename.pdf');
+
