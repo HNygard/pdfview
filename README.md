@@ -8,13 +8,13 @@ Extension for Kohana's View class that renders as a PDF instead of HTML. Uses [D
 
 If your application is a Git repository:
 
-    git submodule add git://github.com/shadowhand/pdfview.git modules/pdfview
+    git submodule add git://github.com/marcelorodrigo/pdfview.git modules/pdfview
     git submodule update --init
 
 Or clone the the module separately:
 
     cd modules
-    git clone git://github.com/shadowhand/pdfview.git pdfview
+    git clone git://github.com/marcelorodrigo/pdfview.git pdfview
 
 ### Update DOMPDF
 
@@ -53,4 +53,15 @@ Placed in a controller action:
     // Display the PDF in the browser as "my_pdf.pdf"
     // Remove "inline = TRUE" to force the PDF to be downloaded
     $this->request->send_file(TRUE, 'my_pdf.pdf', array('inline' => TRUE));
+
+Or use Helper_PDF to display inline/force download:
+
+	// Display PDF inline
+	Helper_PDF::display($pdf);
+
+	// Force PDF download in user browser
+	Helper_PDF::download($pdf)
+
+	// Force PDF download, setting filename
+	Helper_PDF::download($pdf,'filename.pdf');
 
